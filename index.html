@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roominzo Statistics</title>
+    <script src="raphael-2.1.4.min.js"></script>
+    <script src="justgage.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+
+
+</head>
+<style>
+    .w3-allerta {
+        font-family: "Allerta Stencil", Sans-serif;
+    }
+
+    body {}
+</style>
+
+<body>
+    <div class="w3-container w3-center">
+        <div class="w3-container w3-center">
+            <img src="R.jpg" width="200px">
+        </div>
+        <div class="w3-container w3-center">
+            <!-- <h2>
+							R<span class="w3-text-orange">oo</span>m<span class="w3-text-orange">inz</span>O
+						</h2> -->
+            <div class="w3-card-4 w3-border w3-round-border w3-margin">
+                <div id="gauge" class="200x160px"></div>
+
+            </div>
+            <script>
+                var g = new JustGage({
+				id: "gauge",
+				value: 267,
+				min: 0,
+				max: 500,
+				title: "Signed PG"
+				});
+		</script>
+
+							<div class="w3-container">
+								
+									<img src="urbanist.JPG" width="100%">
+								</div>
+            <div class="w3-card-4 w3-border w3-round-border w3-margin">
+                <div id="gaugew" class="200x160px"></div>
+            </div>
+
+            <script>
+                var g = new JustGage({
+				id: "gaugew",
+				value: 1356,
+				min: 0,
+				max: 2000,
+				title: "Signed Rooms"
+				});
+		</script>
+        </div>
+        <div class="w3-container w3-allerta w3-center w3-margin">
+            <div class="w3-row-padding">
+                <div class="w3-panel w3-center">
+                    <b>
+                        Target
+                    </b>
+                </div>
+                <div class="w3-half w3-margin-top">
+
+                    <ul class="w3-ul">
+                        <li>
+                            PG : <b>500</b>
+                        </li>
+                        <li>
+                            Room : <b>2000</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-half w3-center w3-margin-bottom">
+                    <div id="g3" class="gauge"></div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+
+      var g3 = new JustGage({
+        id: 'g3',
+        value: (26700/500),
+        min: 0,
+        max: 100,
+        symbol: '%',
+        donut: true,
+        pointer: true,
+        gaugeWidthScale: 0.4,
+        pointerOptions: {
+          toplength: 10,
+          bottomlength: 10,
+          bottomwidth: 8,
+          color: '#000'
+        },
+        customSectors: [{
+          color: "#ff0000",
+          lo: 50,
+          hi: 100
+        }, {
+          color: "#00ff00",
+          lo: 0,
+          hi: 50
+        }],
+        counter: true
+      });
+
+      document.getElementById('gauge_refresh').addEventListener('click', function() {
+        g1.refresh(getRandomInt(0, 100));
+        g2.refresh(getRandomInt(0, 100));
+        g3.refresh(getRandomInt(0, 100));
+        g4.refresh(getRandomInt(0, 100));
+      });
+    });
+    </script>
+        <style type="text/css">
+            .vertical-text {
+                -ms-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+                -ms-transform-origin: left top 0;
+                -moz-transform-origin: left top 0;
+                -webkit-transform-origin: left top 0;
+                transform-origin: left top 0;
+                background: #E23737;
+                color: #fff;
+                margin-left: 40px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                text-transform: uppercase;
+                border: 1px solid #B52C2C;
+                text-transform: 1px 1px 0px rgba(0, 0, 0, 0.5);
+                box-shadow: 2px -2px 0px rgba(0, 0, 0, 0.1);
+                float: left;
+            }
+        </style>
+    </div>
+    <div class=" w3-center" style="text-align: justify;">
+        <div class="w3-container" style=" background: #E23737;">
+            <p class="w3-allerta w3-text-white">
+                Instant Rooms Available only on<b> R<span class="w3-text-orange">oo</span>mi<span class="w3-text-orange">nz</span>O</b>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
