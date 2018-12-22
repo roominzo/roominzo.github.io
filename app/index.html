@@ -38,6 +38,8 @@
       var csrf = response.state;
       // Send code to server to exchange for access token
 	    console.log(response)
+	      console.log('Number Authentication = ',document.getElementById("phone_number").value)
+
     }
     else if (response.status === "NOT_AUTHENTICATED") {
       // handle authentication failure
