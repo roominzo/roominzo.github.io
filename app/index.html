@@ -7,7 +7,7 @@
 <body>
 
 
-<input value="+1" id="country_code" />
+<input value="+91" id="country_code" />
 <input placeholder="phone number" id="phone_number"/>
 <button onclick="smsLogin();">Login via SMS</button>
 <div>OR</div>
@@ -37,6 +37,7 @@
       var code = response.code;
       var csrf = response.state;
       // Send code to server to exchange for access token
+	    console.log(response)
     }
     else if (response.status === "NOT_AUTHENTICATED") {
       // handle authentication failure
