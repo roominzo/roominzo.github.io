@@ -1,456 +1,394 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Kakarooms Your instant room partner</title>
-    <script src="./js/raphael-2.1.4.min.js"></script>
-    <script src="./js/justgage.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
-
-
-</head>
-<style>
-    .w3-allerta {
-        font-family: "Allerta Stencil", Sans-serif;
-    }
- .w3-sans {
-        font-family: Sans-serif;
-    }
-    body {
-    transition: background-color .5s;
-    background-color: #ffffff;
-}
-
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:#E23737;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-</style>
-
-<body>
-
-    <div class="w3-center" style="text-align: justify;">
-        <div class="w3-container" style=" background: #E23737;">
+   <head>
+      <title>Kakarooms Your instant room partner</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+   </head>
+   <style>
+      .w3-allerta {
+      font-family: "Allerta Stencil", Sans-serif;
+      }
+      .w3-sans {
+      font-family: Sans-serif;
+      }
+      body {
+      transition: background-color .5s;
+      background-color: #ffffff;
+      }
+      .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color:#E23737;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      }
+      .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+      }
+      .sidenav a:hover {
+      color: #f1f1f1;
+      }
+      .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      }
+      #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      }
+      @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+      }
+   </style>
+   <body>
+      <div class="w3-center" style="text-align: justify;">
+         <div class="w3-container" style=" background: #E23737;">
             <h1 class="w3-allerta w3-text-white">
-                                     <span style="font-size:30px;cursor:pointer" class="w3-left w3-text-white" onclick="openNav()">&#9776; </span>
-
-                <b> <span class="w3-text-orange">kaka</span>rooms</b>
-            </b></span>
+               <span style="font-size:30px;cursor:pointer" class="w3-left w3-text-white" onclick="openNav()">&#9776; </span>
+               <b> <span class="w3-text-orange">kaka</span>rooms</b>
+               </b></span>
             </h1>
-
-                <span class="w3-center" style="text-align: center;">
-                    <span class="w3-small w3-padding"><b class="w3-text-white w3-allerta">
-                Your <span class="w3-text-orange">instant </span>room <span class="w3-text-orange">partner</span>
-       
-                </span>
-        </div>
-    </div>
-
-    <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  
-  <a href="#" class="w3-text-orange w3-large">Rent Paying Guest</a>
-  <a href="#" class="w3-allerta w3-large">Services</a>
-  <a href="#" class="w3-text-orange w3-large">Clients</a>
-  <a href="#" class="w3-large">Contact</a>
-  <a href="#" class="w3-large w3-text-orange">Maps</a>
-  <a href="#" class="w3-large">Pricing Plan</a>
-  <a href="#" class="w3-text-orange w3-large">Register</a>
-  <a href="#">Login</a>
-</div>
-
-</div>
-                  <div class="w3-right w3-text-black w3-padding w3-allerta">
-                        <span class="glyphicon glyphicon-phone "></span><span class="w3-allerta"> 9140-</span><span class="w3-text-orange">888-</span>233
-                </div>
-                <div class="w3-left w3-text-black w3-padding">
-                        <span class="glyphicon glyphicon-envelope w3-allerta"> support@<span class="w3-text-orange">kakarooms.com </span>
-                </div> 
-
-    <div class="w3-container w3-center">
-
-       <!--  <div class="w3-container w3-center">
+            <span class="w3-center" style="text-align: center;">
+            <span class="w3-small w3-padding"><b class="w3-text-white w3-allerta">
+            Your <span class="w3-text-orange">instant </span>room <span class="w3-text-orange">partner</span>
+            </span>
+         </div>
+      </div>
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="#" class="w3-text-orange w3-large">Rent Paying Guest</a>
+         <a href="#" class="w3-allerta w3-large">Services</a>
+         <a href="#" class="w3-text-orange w3-large">Clients</a>
+         <a href="#" class="w3-large">Contact</a>
+         <a href="#" class="w3-large w3-text-orange">Maps</a>
+         <a href="#" class="w3-large">Pricing Plan</a>
+         <a href="#" class="w3-text-orange w3-large">Register</a>
+         <a href="#">Login</a>
+      </div>
+      </div>
+      <div class="w3-right w3-text-black w3-padding w3-allerta">
+         <span class="glyphicon glyphicon-phone "></span><span class="w3-allerta"> 9140-</span><span class="w3-text-orange">888-</span>233
+      </div>
+      <div class="w3-left w3-text-black w3-padding">
+         <span class="glyphicon glyphicon-envelope w3-allerta"> support@<span class="w3-text-orange">kakarooms.com </span>
+      </div>
+      <div class="w3-container w3-center">
+         <!--  <div class="w3-container w3-center">
             <img src="kaka.jpg" width="200px">
-  <hr>
-      </div> -->
-        <div class="w3-container w3-center">
+            <hr>
+            </div> -->
+         <div class="w3-container w3-center">
             <!-- <h2>
-                            R<span class="w3-text-orange">oo</span>m<span class="w3-text-orange">inz</span>O
-                        </h2> -->
+               R<span class="w3-text-orange">oo</span>m<span class="w3-text-orange">inz</span>O
+               </h2> -->
             <div class="w3-card-4 w3-border w3-round-border w3-margin">
-                <div id="gauge" class="200x160px"></div>
-
+               <div id="gauge" class="200x160px"></div>
             </div>
             <script>
-                var g = new JustGage({
-                id: "gauge",
-                value: 267,
-                min: 0,
-                max: 500,
-                title: "Signed PG"
-                });
-        </script>
-
-                            
-
+               var g = new JustGage({
+               id: "gauge",
+               value: 267,
+               min: 0,
+               max: 500,
+               title: "Signed PG"
+               });
+            </script>
             <div class="w3-card-4 w3-border w3-round-border w3-margin">
-                <div id="gaugew" class="200x160px"></div>
+               <div id="gaugew" class="200x160px"></div>
             </div>
-
             <script>
-                var g = new JustGage({
-                id: "gaugew",
-                value: 1356,
-                min: 0,
-                max: 2000,
-                title: "Signed Rooms"
-                });
-        </script>
-        </div>
-
-
-<!-- images-->
-                    <div class="w3-container w3-text-black w3-padding">
+               var g = new JustGage({
+               id: "gaugew",
+               value: 1356,
+               min: 0,
+               max: 2000,
+               title: "Signed Rooms"
+               });
+            </script>
+         </div>
+         <!-- images-->
+         <div class="w3-container w3-text-black w3-padding">
             <div class="w3-container w3-margin">
-                <h4 class="w3-sans">
-            Download <b>kaka<span class="w3-text-orange">rooms</span></b> App available on Google Play Store and Apple App Store
-            </h4>
+               <h4 class="w3-sans">
+                  Download <b>kaka<span class="w3-text-orange">rooms</span></b> App available on Google Play Store and Apple App Store
+               </h4>
             </div>
             <div class="w3-row-padding">
-                <div class="w3-third w3-padding">
-                    <img src="app/first.PNG" class="w3-image" width="50%">
-                    <br>
-                    EASY LOGIN
-                </div>
-                                <div class="w3-third w3-padding">
-                    <img src="app/second.PNG" class="w3-image" width="60%">
-                    <br>
-                   FAST <span class="w3-text-orange w3-allerta">SEARCH</span>
-                
-                </div>
-                                <div class="w3-third w3-padding">
-                    <img src="app/third.PNG" class="w3-image" width="55%">
-                    <br>
-                   INSTANT REQUEST & BOOK
-                
-                </div>
+               <div class="w3-third w3-padding">
+                  <img src="app/first.PNG" class="w3-image" width="50%">
+                  <br>
+                  EASY LOGIN
+               </div>
+               <div class="w3-third w3-padding">
+                  <img src="app/second.PNG" class="w3-image" width="60%">
+                  <br>
+                  FAST <span class="w3-text-orange w3-allerta">SEARCH</span>
+               </div>
+               <div class="w3-third w3-padding">
+                  <img src="app/third.PNG" class="w3-image" width="55%">
+                  <br>
+                  INSTANT REQUEST & BOOK
+               </div>
             </div>
-
-        </div>
-<!-- -->
-        <div class="w3-container w3-allerta w3-center w3-margin w3-text-black">
+         </div>
+         <!-- -->
+         <div class="w3-container w3-allerta w3-center w3-margin w3-text-black">
             <div class="w3-row-padding">
-                <div class="w3-panel w3-center">
-                    <b>
-                        Target
-                    </b>
-                </div>
-                <div class="w3-half w3-margin-top">
-
-                    <ul class="w3-ul">
-                        <li>
-                            PG : <b>500</b>
-                        </li>
-                        <li>
-                            Room : <b>2000</b>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w3-half w3-center w3-margin-bottom">
-                    <div id="g3" class="gauge"></div>
-
-                </div>
+               <div class="w3-panel w3-center">
+                  <b>
+                  Target
+                  </b>
+               </div>
+               <div class="w3-half w3-margin-top">
+                  <ul class="w3-ul">
+                     <li>
+                        PG : <b>500</b>
+                     </li>
+                     <li>
+                        Room : <b>2000</b>
+                     </li>
+                  </ul>
+               </div>
+               <div class="w3-half w3-center w3-margin-bottom">
+                  <div id="g3" class="gauge"></div>
+               </div>
             </div>
-        </div>
-<!-- new card on website -->
-
-<div class="w3-display-container w3-center w3-padding">
-   <!--  <div class="w3-row-padding">
-        <div class="w3-third">
-            <div class="w3-card-4">
-                <img src="images/1.jpg" width="33%">
-
+         </div>
+         <!-- new card on website -->
+         <div class="w3-display-container w3-center w3-padding">
+            <!--  <div class="w3-row-padding">
+               <div class="w3-third">
+                   <div class="w3-card-4">
+                       <img src="images/1.jpg" width="33%">
+               
+                   </div>
+               </div>
+               <div class="third">
+                   <div class="w3-card-4">
+                       
+                       <img src="images/2.jpg" width="33%">
+               
+                   </div>
+               </div>
+               <div class="w3-third">
+                   <div class="w3-card-4">
+                       
+                       <img src="images/3.jpg" width="33%">
+               
+                   </div>
+               </div>
+               </div> -->
+            <div class="w3-card-4 w3-text-black w3-border w3-round-xlarge" >
+               <div class="w3-container w3-large w3-sans w3-center">
+                  <span>
+                  <b>
+                  <span class="w3-text-orange">kaka</span>rooms
+                  </b>246 AB Boys Hostel
+                  </span>
+               </div>
+               <div class="w3-display-container mySlides">
+                  <img src="images/3.jpg" width="100%" class="w3-image">
+                  <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
+                  Kitchen
+                  </span>
+               </div>
+               <div class="w3-display-container mySlides">
+                  <img src="images/5.jpg" width="100%" class="w3-image">
+                  <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
+                  Bedroom
+                  </span>
+               </div>
+               <div class="w3-display-container mySlides">
+                  <img src="images/6.jpg" width="100%" class="w3-image">
+                  <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
+                  Hall
+                  </span>
+               </div>
+               <div class="w3-display-container mySlides">
+                  <img src="images/7.jpg" width="100%" class="w3-image">
+                  <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
+                  Front View
+                  </span>
+               </div>
+               <!-- <button class="w3-button w3-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                  --><button class="w3-button w3-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+               <span class="w3-tag w3-left w3-medium w3-padding w3-orange w3-text-white">
+               Boys
+               </span>
+               <p class="w3-text-black w3-right w3-padding">
+                  Rooms Available
+                  <span class="w3-badge w3-orange w3-margin-left w3-large w3-text-white w3-right">
+                  6
+                  </span>
+               </p>
+               <div class="w3-container w3-text-gray">
+                  <div class="w3-row-padding">
+                     <div class="w3-third">
+                        Fully Furnished
+                     </div>
+                     <div class="w3-third">
+                        3 Time Meal
+                     </div>
+                     <div class="w3-third">
+                        1 Bed/Invertor
+                     </div>
+                  </div>
+               </div>
+               <div class="w3-container w3-padding">
+                  <b class="w3-left w3-center">
+                  Rent
+                  <br>
+                  <span class="w3-badge w3-round w3-large w3-orange w3-text-white">
+                  7,000
+                  </span>
+                  </b>
+                  <b class="w3-right w3-center">
+                  Security Deposit
+                  <br>
+                  <span class="w3-badge w3-round w3-large w3-orange w3-text-white">
+                  1 Month Rent
+                  </span>
+                  </b>
+               </div>
             </div>
-        </div>
-        <div class="third">
-            <div class="w3-card-4">
-                
-                <img src="images/2.jpg" width="33%">
-
-            </div>
-        </div>
-        <div class="w3-third">
-            <div class="w3-card-4">
-                
-                <img src="images/3.jpg" width="33%">
-
-            </div>
-        </div>
-    </div> -->
-    <div class="w3-card-4 w3-text-black w3-border w3-round-xlarge" >
-        <div class="w3-container w3-large w3-sans w3-center">
-                <span>
-                    <b>
-                        <span class="w3-text-orange">kaka</span>rooms
-                    </b>246 AB Boys Hostel
-                </span>
-        </div>
-            <div class="w3-display-container mySlides">
-        <img src="images/3.jpg" width="100%" class="w3-image">
-        <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
-            Kitchen
-        </span>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="images/5.jpg" width="100%" class="w3-image">
-        <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
-            Bedroom
-        </span>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="images/6.jpg" width="100%" class="w3-image">
-        <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
-            Hall
-        </span>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="images/7.jpg" width="100%" class="w3-image">
-        <span class="w3-display-topleft w3-round w3-badge w3-orange w3-text-white">
-            Front View
-        </span>
-
-        </div>
-<!-- <button class="w3-button w3-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
- --><button class="w3-button w3-right w3-black" onclick="plusDivs(1)">&#10095;</button>
- 
-        <span class="w3-tag w3-left w3-medium w3-padding w3-orange w3-text-white">
-            Boys
-        </span>
-        <p class="w3-text-black w3-right w3-padding">
-            Rooms Available
-        <span class="w3-badge w3-orange w3-margin-left w3-large w3-text-white w3-right">
-            6
-        </span>
-        </p>
-            <div class="w3-container w3-text-gray">
-            <div class="w3-row-padding">
-                
-            <div class="w3-third">
-                Fully Furnished
-            </div>
-                        <div class="w3-third">
-                3 Time Meal
-            </div>
-
-            <div class="w3-third">
-                1 Bed/Invertor
-            </div>
-            </div>
-
-        </div>
-        
-        <div class="w3-container w3-padding">
-        <b class="w3-left w3-center">
-            Rent
-                <br>
-            <span class="w3-badge w3-round w3-large w3-orange w3-text-white">
-                7,000
-            </span>
-        </b>
-        <b class="w3-right w3-center">
-           Security Deposit
-<br>
-            <span class="w3-badge w3-round w3-large w3-orange w3-text-white">
-                1 Month Rent
-            </span>
-        </b>
-          
-
- 
-    </div>
- 
-    </div>
-    
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-
-<!-- -->
-
-   <div class="w3-container w3-padding" style="background-color:#292424;margin:0px -17px 0px -17px">
-                            
-                               <div class="w3-row-padding">
-                                   
-                                <div class="w3-half" style="max-width: 50%">
-                                    <img src="TEST.PNG" class="w3-round" width="50%">
-                                </div>
-                                <div class="w3-half" style="max-width: 50%">
-                                    <img src="TEST.PNG" class="w3-round" width="50%">
-                                </div>
-                                    
-                               </div>
-                               <br>
-                               <div class="w3-row-padding">
-                                   
-                                <div class="w3-half" style="max-width: 50%">
-                                    <img src="TEST.PNG" class="w3-round" width="51%">
-                                </div>
-                                <div class="w3-half" style="max-width: 50%">
-                                    <img src="TEST.PNG" class="w3-round" width="50%">
-                                </div>
-                            </div>
-                            <br>
-                                                </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function(event) {
-
-      var g3 = new JustGage({
-        id: 'g3',
-        value: (26700/500),
-        min: 0,
-        max: 100,
-        symbol: '%',
-        donut: true,
-        pointer: true,
-        gaugeWidthScale: 0.4,
-        pointerOptions: {
-          toplength: 10,
-          bottomlength: 10,
-          bottomwidth: 8,
-          color: '#000'
-        },
-        customSectors: [{
-          color: "#ff0000",
-          lo: 50,
-          hi: 100
-        }, {
-          color: "#00ff00",
-          lo: 0,
-          hi: 50
-        }],
-        counter: true
-      });
-
-      document.getElementById('gauge_refresh').addEventListener('click', function() {
-        g1.refresh(getRandomInt(0, 100));
-        g2.refresh(getRandomInt(0, 100));
-        g3.refresh(getRandomInt(0, 100));
-        g4.refresh(getRandomInt(0, 100));
-      });
-    });
-    </script>
-        <style type="text/css">
-            .vertical-text {
-                -ms-transform: rotate(90deg);
-                -moz-transform: rotate(90deg);
-                -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
-                -ms-transform-origin: left top 0;
-                -moz-transform-origin: left top 0;
-                -webkit-transform-origin: left top 0;
-                transform-origin: left top 0;
-                background: #E23737;
-                color: #fff;
-                margin-left: 40px;
-                padding: 10px;
-                border: 1px solid #ccc;
-                text-transform: uppercase;
-                border: 1px solid #B52C2C;
-                text-transform: 1px 1px 0px rgba(0, 0, 0, 0.5);
-                box-shadow: 2px -2px 0px rgba(0, 0, 0, 0.1);
-                float: left;
+         </div>
+         <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
             }
-        </style>
-    </div>
-
-
-     
-
-    <div class=" w3-center" style="text-align: justify;">
-        <div class="w3-container w3-padding" style=" background: #E23737;">
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+         </script>
+         <!-- -->
+         <div class="w3-container w3-padding" style="background-color:#292424;margin:0px -17px 0px -17px">
+            <div class="w3-row-padding">
+               <div class="w3-half" style="max-width: 50%">
+                  <img src="TEST.PNG" class="w3-round" width="50%">
+               </div>
+               <div class="w3-half" style="max-width: 50%">
+                  <img src="TEST.PNG" class="w3-round" width="50%">
+               </div>
+            </div>
+            <br>
+            <div class="w3-row-padding">
+               <div class="w3-half" style="max-width: 50%">
+                  <img src="TEST.PNG" class="w3-round" width="51%">
+               </div>
+               <div class="w3-half" style="max-width: 50%">
+                  <img src="TEST.PNG" class="w3-round" width="50%">
+               </div>
+            </div>
+            <br>
+         </div>
+         <style type="text/css">
+            .vertical-text {
+            -ms-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            -ms-transform-origin: left top 0;
+            -moz-transform-origin: left top 0;
+            -webkit-transform-origin: left top 0;
+            transform-origin: left top 0;
+            background: #E23737;
+            color: #fff;
+            margin-left: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-transform: uppercase;
+            border: 1px solid #B52C2C;
+            text-transform: 1px 1px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px -2px 0px rgba(0, 0, 0, 0.1);
+            float: left;
+            }
+         </style>
+      </div>
+      <div class=" w3-center" style="text-align: justify;">
+         <div class="w3-container w3-padding" style=" background: #E23737;">
             <p class="w3-allerta w3-text-white">
-                Instant Rooms Available only on<b> <span class="w3-text-orange">kaka</span>rooms</b>
+               Instant Rooms Available only on<b> <span class="w3-text-orange">kaka</span>rooms</b>
             </p>
-        </div>
-    </div>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.2)";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-}
-</script>
-     
-</body>
-
+         </div>
+      </div>
+      <script>
+         function openNav() {
+             document.getElementById("mySidenav").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "250px";
+             document.body.style.backgroundColor = "rgba(0,0,0,0.2)";
+         }
+         
+         function closeNav() {
+             document.getElementById("mySidenav").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+             document.body.style.backgroundColor = "white";
+         }
+                      document.addEventListener("DOMContentLoaded", function(event) {
+            
+            var g3 = new JustGage({
+            id: 'g3',
+            value: (26700/500),
+            min: 0,
+            max: 100,
+            symbol: '%',
+            donut: true,
+            pointer: true,
+            gaugeWidthScale: 0.4,
+            pointerOptions: {
+            toplength: 10,
+            bottomlength: 10,
+            bottomwidth: 8,
+            color: '#000'
+            },
+            customSectors: [{
+            color: "#ff0000",
+            lo: 50,
+            hi: 100
+            }, {
+            color: "#00ff00",
+            lo: 0,
+            hi: 50
+            }],
+            counter: true
+            });
+            
+            document.getElementById('gauge_refresh').addEventListener('click', function() {
+            g1.refresh(getRandomInt(0, 100));
+            g2.refresh(getRandomInt(0, 100));
+            g3.refresh(getRandomInt(0, 100));
+            g4.refresh(getRandomInt(0, 100));
+            });
+            });
+      </script>
+      <script defer src="./js/raphael-2.1.4.min.js"></script>
+      <script defer src="./js/justgage.js"></script>
+   </body>
 </html>
